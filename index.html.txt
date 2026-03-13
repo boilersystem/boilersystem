@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buhar Kazanı Dünyası</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="welcome-screen">
+        <div class="welcome-content">
+            <h1>Sitemize Hoş Geldiniz</h1>
+            <p>Endüstriyel Buhar Teknolojileri ve Ekipmanları</p>
+            <button onclick="entrySite()">Keşfetmeye Başla</button>
+        </div>
+    </div>
+
+    <div class="container" id="main-content" style="display:none;">
+        <nav class="sidebar">
+            <h2>Ekipmanlar</h2>
+            <ul>
+                <li><a href="#" onclick="showContent('brulor')">Brülör</a></li>
+                <li><a href="#" onclick="showContent('ekonomizer')">Ekonomizer</a></li>
+                <li><a href="#" onclick="showContent('degazor')">Degazör</a></li>
+                <li><a href="#" onclick="showContent('besleme-pompasi')">Besleme Pompası</a></li>
+            </ul>
+        </nav>
+
+        <main class="content-area" id="display-panel">
+            <div class="info-box">
+                <h2>Lütfen bir ekipman seçiniz</h2>
+                <p>Ekipman detayları, görselleri ve teknik bilgileri burada görüntülenecektir.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

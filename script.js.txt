@@ -1,0 +1,43 @@
+// Giriş ekranını geçme
+function entrySite() {
+    document.getElementById('welcome-screen').style.display = 'none';
+    document.getElementById('main-content').style.display = 'flex';
+}
+
+// Ekipman verileri
+const equipmentData = {
+    'brulor': {
+        title: "Brülör",
+        img: "https://images.unsplash.com/photo-1590959614216-75774bb34ac1?auto=format&fit=crop&w=600&q=80",
+        info: "Brülör, yakıtın hava ile uygun oranda karıştırılarak tam olarak yakılmasını sağlayan cihazdır. Kazanın kalbi sayılır."
+    },
+    'ekonomizer': {
+        title: "Ekonomizer",
+        img: "https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=600&q=80",
+        info: "Baca gazı sıcaklığından faydalanarak besleme suyunu ısıtan, böylece yakıt tasarrufu sağlayan ısı eşanjörüdür."
+    },
+    'degazor': {
+        title: "Degazör",
+        img: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=600&q=80",
+        info: "Besleme suyundaki korozif gazları (O2 ve CO2) uzaklaştırarak kazanın ömrünü uzatan ekipmandır."
+    },
+    'besleme-pompasi': {
+        title: "Besleme Pompası",
+        img: "https://images.unsplash.com/photo-1504328332790-bb2cb332ed3b?auto=format&fit=crop&w=600&q=80",
+        info: "Kazan içerisindeki basıncı yenerek suyun kazana girmesini sağlayan yüksek basınçlı pompalardır."
+    }
+};
+
+function showContent(id) {
+    const display = document.getElementById('display-panel');
+    const data = equipmentData[id];
+
+    display.innerHTML = `
+        <h1>${data.title}</h1>
+        <img src="${data.img}" alt="${data.title}" class="equipment-img">
+        <div class="info-box">
+            <h3>Teknik Bilgiler</h3>
+            <p>${data.info}</p>
+        </div>
+    `;
+}
